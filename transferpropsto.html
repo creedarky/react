@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>First component</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script type="text/javascript" src="bower_components/react/react.js" > </script>
+    <script type="text/javascript" src="bower_components/react/JSXTransformer.js" > </script>
+    <style >
+        body { margin: 25px; }
+    </style>
+</head>
+<body>
+    <script type="text/jsx">
+        /*** @jsx React.DOM */
+        var APP = React.createClass({
+           render:function() {
+                return (
+                    <div>
+                        <BButton href="javascript:alert('Hello')" className="btn-primary"><BIcon className="glyphicon-heart"/> React</BButton>
+                        <BButton href="javascript:alert('Hello')" className="btn-success"><BIcon className="glyphicon-plus"/> React</BButton>
+                        <BButton href="javascript:alert('Hello')" className="btn-danger"><BIcon className="glyphicon-minus"/> React</BButton>
+                    </div>
+                )
+            }
+        });
+
+        var BButton = React.createClass({
+            render: function() {
+                return (
+                    this.transferPropsTo(<a className="btn">{this.props.children}</a>)
+                )
+            }
+        });
+        var BIcon = React.createClass({
+            render: function() {
+                return (
+                    this.transferPropsTo(<span className="glyphicon"></span>)
+                )
+            }
+        });
+
+
+
+        React.renderComponent(<APP />,document.body);
+
+    </script>
+</body>
+</html>
