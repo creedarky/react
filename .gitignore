@@ -1,0 +1,11 @@
+*.sw*
+*~
+build/
+bin/
+bower_components/
+node_modules/
+.idea/
+vendor/
+npm-debug.log
+.DS_Store
+coverage/

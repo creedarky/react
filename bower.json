@@ -1,0 +1,23 @@
+{
+  "name": "react-egghead",
+  "version": "0.0.0",
+  "homepage": "https://github.com/creedarky/react",
+  "authors": [
+    "Maximiliano Castro <creedarky@gmail.com>"
+  ],
+  "description": "react test",
+  "keywords": [
+    "react"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.12.2"
+  }
+}
