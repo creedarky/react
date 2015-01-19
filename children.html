@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>First component</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/react.js" > </script>
+    <script type="text/javascript" src="js/jsxtransformer.js" > </script>
+    <style >
+        body { margin: 25px; }
+    </style>
+</head>
+<body>
+    <script type="text/jsx">
+        /*** @jsx React.DOM */
+        var APP = React.createClass({
+           render:function() {
+                return (
+                  <BButton>I <BHeart /> React</BButton>
+                )
+            }
+        });
+
+        var BButton = React.createClass({
+            render: function() {
+                return (
+                    <a className="btn btn-primary">{this.props.children}</a>
+                )
+            }
+        });
+        var BHeart = React.createClass({
+            render: function() {
+                return (
+                    <span className="glyphicon glyphicon-heart"></span>
+                )
+            }
+        });
+
+
+
+        React.renderComponent(<APP />,document.body);
+
+    </script>
+</body>
+</html>
